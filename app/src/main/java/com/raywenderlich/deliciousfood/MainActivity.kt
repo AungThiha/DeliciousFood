@@ -72,6 +72,11 @@ class MainActivity : AppCompatActivity() {
                 .build(this)
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        camera.deleteImage()
+    }
+
     fun takePicture(view: View) {
         if (!hasPermission(android.Manifest.permission.WRITE_EXTERNAL_STORAGE) ||
                 !hasPermission(android.Manifest.permission.CAMERA)) {
