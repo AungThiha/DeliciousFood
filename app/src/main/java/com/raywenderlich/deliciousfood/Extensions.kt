@@ -29,8 +29,8 @@
  */
 package com.raywenderlich.deliciousfood
 
-import android.support.design.widget.Snackbar
 import android.view.View
+import com.google.android.material.snackbar.Snackbar
 
 fun View.snack(message: String, length: Int = Snackbar.LENGTH_LONG, f: Snackbar.() -> Unit) {
     val snack = Snackbar.make(this, message, length)
